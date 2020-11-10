@@ -92,10 +92,15 @@ $cars = array(
 
 // $keys = array_keys($cars);
 foreach($cars as $car) {
-    // foreach($car as $key => $value) {
-        echo $car['availabe'];
-        // break;
-    // }
+    echo ('<div class="card" style="width: 18rem;">
+    <img src= "'.$car['img'].'" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">'.$car['brand'].'</h5>
+    '.$car['model'].'
+    <p> availible: '.$car['availabe'].' </p>
+    <p> location: '.$car['location'].' </p>
+    <p> price: '.$car['price'].' €/day </p>
+    </div>');
 }
 
 ?>
@@ -104,10 +109,10 @@ foreach($cars as $car) {
 </body>
 
 </html>
+<!-- echo $car['availabe'] -->
 
-
-foreach($cars as $car){
+<!-- foreach($cars as $car){
 foreach($car as $key => $value){
 echo $key . ': ' .$value . '<br>\n';
 }
-}
+} -->
